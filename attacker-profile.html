@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberB News</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #9a9999;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 35px;
+        padding-top: 15px;
+        align-items: center;
+      }
+
+      .navbar .navbar-logo {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .navbar-links a {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+
+      .container {
+        margin-top: 20px;
+        padding-inline: 35px;
+      }
+
+      .attacker {
+        display: flex;
+        background: rgb(169,51,51);
+        background: linear-gradient(90deg, rgba(169,51,51,1) 0%, rgba(67,20,20,1) 100%);
+        padding: 30px;
+        border-radius: 20px;
+        align-items: start;
+        color: white;
+      }
+
+      .attacker img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        display: flex;
+        object-fit: cover;
+        margin-right: 30px;
+      }
+
+      .attack-post {
+        margin-top: 30px;
+        background-color: #d9d9d9;
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .post-card {
+        display: flex;
+        gap: 30px;
+        cursor: pointer;
+      }
+
+      .post-card img {
+        border-radius: 20px;
+        width: 300px;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">CyberB<br />News</div>
+      <ul class="navbar-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/trending.html">Trending</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="attacker">
+        <img
+          src="/assets/images/attacker-bjorka-1.png"
+          alt=""
+        />
+        <div>
+          <h1>Bjorka</h1>
+          <p>
+            Bjorka is a pseudonymous hacker known for high-profile data
+            breaches, primarily targeting Indonesian institutions. Their actions
+            have exposed systemic cybersecurity flaws, sparking public debates
+            about data protection and government.
+          </p>
+        </div>
+        <div
+          style="
+            width: 40%;
+            margin-left: 20px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+          "
+        >
+          <div>
+            First recorded attack: September 2022<br />Last recorded attack:
+            September 2024
+          </div>
+          <br />
+          <br />
+          <div>Number of Attacks Recorded: 2</div>
+        </div>
+      </div>
+      <div class="attack-post">
+        <div class="post-card" onclick="redirectNews()">
+          <img
+            src="/assets/images/cyber-security-1.png"
+            alt=""
+          />
+          <div>
+            <h2>
+              Bjorka, the Online Hacker Trying To Take Down the Indonesian
+              Government
+            </h2>
+            <p>
+              The hacker using the Bjorka account is suspected of freely
+              hacking  netizens’ data in a number of applications managed by
+              public  institutions. This indicates the unpreparedness of public
+              institutions  in fulfilling obligations as stipulated in the
+              Personal Data Protection  Law. Over.....
+            </p>
+            <div>1 Hour Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img
+            src="/assets/images/cyber-security-9.png"
+            alt=""
+          />
+          <div>
+            <h2>
+              BIN, Police already identified hacker of some government sites
+            </h2>
+            <p>
+              The State Intelligence Agency (BIN) and National Police identified
+              "Bjorka," a hacker, who reportedly hacked the data of several
+              Indonesian government websites, Coordinating Political, Legal, and
+              Security Affairs Minister Mahfud MD stated. "However, the
+              information regarding who and where they (Bjorka) are has not been
+              able to be announced. We already have the tools to track them,"
+              the minister stated...
+            </p>
+            <div>2 Years Ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright 2024 - 2024 PT. CyberB News Media. All Rights Reserved.
+    </footer>
+
+    <script>
+      function redirectNews() {
+        window.location.href = "/single.html";
+      }
+
+      function redirectAttacker() {
+        window.location.href = "/attacker-profile.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberB News</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #9a9999;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 35px;
+        padding-top: 15px;
+        align-items: center;
+      }
+
+      .navbar .navbar-logo {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .navbar-links a {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+
+      .container {
+        margin-top: 20px;
+        padding-inline: 35px;
+      }
+
+      .container h1 {
+        text-align: center;
+      }
+
+      .posts {
+        margin-top: 30px;
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .post-card {
+        display: flex;
+        gap: 30px;
+        cursor: pointer;
+      }
+
+      .post-card img {
+        border-radius: 20px;
+        width: 30%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .post-card-content {
+        width: 65%;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">CyberB<br />News</div>
+      <ul class="navbar-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/trending.html">Trending</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>TRENDING</h1>
+      <div class="posts">
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-3.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              Founder of collapsed crypto giant Celsius admits to manipulations
+              and fraud.
+            </h2>
+            <p>
+              According to Inner City Press reports from the court, Mashinsky
+              admitted that he induced investors to sell their bitcoin (BTC) to
+              Celsius by making false statements about its Earn program, which
+              was designed to pay up to 18% interest on their deposits.
+              Moreover, the founder pleaded guilty to manipulating the price of
+              CEL, the native token...
+            </p>
+            <div>2 hours Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-2.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              Cloudflare: 6.5% of global traffic, 4.3% of emails potentially
+              malicious
+            </h2>
+            <p>
+              The attackers sent emails mimicking the official messages from a
+              legitimate organization, the Ukrainian League of Industrialists
+              and Entrepreneurs, according to the country’s cyber defence
+              authorities. “The emails advertised a conference held on December
+              5th in Kyiv, aimed at aligning the products of domestic defense
+              industry companies with NATO standards,” the State Service for
+              Special Communications and Information Protection (SSSCIP) said...
+            </p>
+            <div>2 Days Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-6.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              OpenAI’s new model pursues survival at all costs, tests show
+            </h2>
+            <p>
+              Observers of the fast-developing AI industry have always been
+              worried that one day, the models might go rogue and disobey human
+              commands. Well, that day is hurtling towards us, it seems. “When
+              o1 was led to believe that it would be shut down when acting on
+              its goal and that its actions were monitored, it attempted to
+              deactivate this 'oversight mechanism' [five percent] of the time,”
+              OpenAI said in its latest system card report.
+            </p>
+            <div>5 hours Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-8.png" alt="" />
+          <div class="post-card-content">
+            <h2>Massive breach exposes major USAID contractor</h2>
+            <p>
+              The US-headquartered international development firm Chemonics
+              revealed over 263,000 people were exposed in a months-long data
+              breach. The company is a major international development firm and
+              one of the largest receivers of funds from the United States
+              Agency for International Development (USAID). For example, it is
+              leading a $9.5 billion initiative to strengthen global medical
+              supply chains. According to the letter that Chemonics sent to
+              impacted individuals, the company first noticed “suspicious
+              activity” in mid-December...
+            </p>
+            <div>1 Day Ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright 2024 - 2024 PT. CyberB News Media. All Rights Reserved.
+    </footer>
+
+    <script>
+      function redirectNews() {
+        window.location.href = "/single.html";
+      }
+
+      function redirectAttacker() {
+        window.location.href = "/attacker-profile.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberB News</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #9a9999;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 35px;
+        padding-top: 15px;
+        align-items: center;
+      }
+
+      .navbar .navbar-logo {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .navbar-links a {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+
+      .container {
+        margin-top: 20px;
+        padding-inline: 35px;
+      }
+
+      .post-container {
+        justify-content: space-between;
+        display: flex;
+      }
+
+      .content {
+        width: 60%;
+      }
+
+      .content img {
+        width: 100%;
+        height: 30%;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      .additional {
+        width: 35%;
+      }
+
+      .attacker {
+        background: rgb(169,51,51);
+        background: linear-gradient(90deg, rgba(169,51,51,1) 0%, rgba(67,20,20,1) 100%);
+        height: max-content;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .attacker img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 30px;
+        object-fit: cover;
+      }
+
+      .top-posts-container {
+        border-radius: 20px;
+        background-color: #d9d9d9;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .top-posts-card {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        cursor: pointer;
+      }
+
+      .top-posts-card img {
+        width: 150px;
+        height: 100px;
+        border-radius: 20px;
+        margin-right: 20px;
+      }
+
+      .top-posts-card h4 {
+        margin: 0;
+        margin-top: 2px;
+        padding-inline: 10px;
+        width: 50%;
+      }
+
+      .comments {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .comments h4 {
+        margin: 0px;
+        margin-top: 10px;
+      }
+
+      .comments input {
+        border-radius: 20px;
+        width: 50%;
+        border-width: 0;
+      }
+
+      .comments button {
+        width: 200px;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">CyberB<br />News</div>
+      <ul class="navbar-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/trending.html">Trending</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1 style="margin-bottom: 20px">
+        Bjorka, the Online Hacker Trying To Take Down the Indonesian Government
+      </h1>
+      <div class="post-container">
+        <div class="content">
+          <img src="/assets/images/cyber-security-1.png" alt="" />
+          <h4>Bjorka is Back in Action</h4>
+          <p>
+            The hacker using the Bjorka account is suspected of freely hacking
+            netizens’ data in a number of applications managed by public
+            institutions. This indicates the unpreparedness of public
+            institutions in fulfilling obligations as stipulated in the Personal
+            Data Protection Law.<br /><br />
+            Over the last week, reports about personal-data leakage have again
+            come to the fore. A total of 44.2 million netizens’ data, believed
+            to be managed through the application MyPertamina, were marketed by
+            the Bjorka account on the Breached Forum website at the price of Rp
+            392 million (US$25,000). Recently, it marketed 3.25 billion data
+            claimed to have come from the application Peduli Lindungi worth
+            $100,000.<br /><br />
+            In “Indonesia COVID-19 App Peduli Lindungi 3.2 Billion” uploaded on
+            Breached Forum on Tuesday (15/11/2022), Bjorka stated that the data
+            include name, email address, resident’s identification number,
+            telephone number, date of birth, gadget identity, COVID-19 status,
+            checking history, contact-tracing history and vaccination.<br /><br />
+            Head of the State Cyber and Encryption Agency (BSSN), Hinsa
+            Siburian, when requested to confirm the sale of data by Bjorka
+            through a short message on Wednesday (16/11), asked Kompas to
+            contact the BSSN spokesperson. However, BSSN spokesman Ariandi Putra
+            gave no response to the question sent. Public Information bureau
+            chief of the National Police Public Relations Division, Brig. Gen.
+            Ahmad Ramadhan, made no response either when asked about the alleged
+            hacking by the Bjorka account.<br /><br />
+            Previously, the Communications and Information Ministry’s Director
+            General of Informatic Applications, Semuel Abrijani Pangerapan, did
+            not answer the question about the alleged hacking either. Semuel
+            diverted the question to the Health Ministry as the regulator of the
+            application Peduli Lindungi.
+          </p>
+          <h4>A slap for the government</h4>
+          <p>
+            Chairman of the Communications and Information System Security
+            Research Center, Pratama Persadha, regretted the absence of official
+            response from the authorities to the claim of 3.2 billion data from
+            the application Peduli Lindungi offered by Bjorka. In fact, if the
+            leakage has truly occurred, the public is the victim.<br /><br />
+            In his view, if the leakage of data from the application Peduli
+            Lindungi as claimed by Bjorka has taken place, it constitutes a slap
+            in the government’s face. Furthermore, in September the government
+            already set up the Data Protection Task Force comprising the
+            National Police, the Communication and Information Ministry, the
+            BSSN and the State Intelligence Agency (BIN).<br /><br />
+            Executive director of the Public Study and Advocacy Institute,
+            Wahyudi Djafar, said the recurrence of the suspected series of data
+            leaks indicated that data regulators, especially those of public
+            institutions, were as yet unprepared to fulfill the obligations as
+            specified in the Personal Data Protection (PDP) Law. The obligation
+            concerns the assurance of processing security, protection of secrecy
+            and notification if any leakage occurs.
+          </p>
+          <div class="date">12/11/2024</div>
+        </div>
+        <div class="additional">
+          <div class="attacker" onclick="redirectAttacker()">
+            <img src="/assets/images/attacker-bjorka-1.png" alt="" />
+            <div>Suspected Attacker: Bjorka<br />Attacks: 2 posts</div>
+          </div>
+          <div class="top-posts">
+            <h3>Top Posts</h3>
+            <div class="top-posts-container">
+              <div class="top-posts-card" onclick="redirectNews()">
+                <img src="/assets/images/cyber-security-3.png" alt="" />
+                <h4>
+                  Founder of collapsed crypto giant Celsius admits to
+                  manipulations and fraud. - 2 hours ago
+                </h4>
+              </div>
+              <div class="top-posts-card" onclick="redirectNews()">
+                <img src="/assets/images/cyber-security-2.png" alt="" />
+                <h4>
+                  Cloudflare: 6.5% of global traffic, 4.3% of emails potentially
+                  malicious. - 1 days ago
+                </h4>
+              </div>
+              <div class="top-posts-card" onclick="redirectNews()">
+                <img src="/assets/images/cyber-security-4.png" alt="" />
+                <h4>
+                  Hackers target Ukraine’s defence sector in new campaign. - 23
+                  hours ago
+                </h4>
+              </div>
+              <div class="top-posts-card" onclick="redirectNews()">
+                <img src="/assets/images/cyber-security-6.png" alt="" />
+                <h4>
+                  OpenAI’s new model pursues survival at all costs, tests show -
+                  5 Hours ago
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <h2>Comments</h2>
+        <h4>Name:</h4>
+        <input type="text" style="height: 30px" />
+        <h4>Comment:</h4>
+        <input type="textarea" style="height: 100px" />
+        <button>Post Comment</button>
+      </div>
+    </div>
+
+    <footer>
+      Copyright 2024 - 2024 PT. CyberB News Media. All Rights Reserved.
+    </footer>
+
+    <script>
+      function redirectNews() {
+        window.location.href = "/single.html";
+      }
+
+      function redirectAttacker() {
+        window.location.href = "/attacker-profile.html";
+      }
+    </script>
+  </body>
+</html>

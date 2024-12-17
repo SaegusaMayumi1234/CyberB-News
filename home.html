@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberB News</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #9a9999;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 35px;
+        padding-top: 15px;
+        align-items: center;
+      }
+
+      .navbar .navbar-logo {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .navbar-links a {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+
+      .news-tag {
+        margin-top: 10px;
+        padding: 15px;
+        padding-inline: 35px;
+      }
+
+      .news-tag .tag-container {
+        background-color: #d9d9d9;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 30px;
+        padding-block: 5px;
+        padding-inline: 15px;
+        cursor: pointer;
+      }
+
+      .news-tag .tag-container li {
+        background-color: red;
+        border-radius: 20px;
+        width: 15%;
+        text-align: center;
+      }
+
+      .news-tag .tag-container a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .news-headline {
+        padding: 15px;
+        padding-inline: 35px;
+      }
+
+      .headline-slide-container .nav-buttons {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        padding-left: 15px;
+      }
+
+      .headline-slide-container .nav-buttons button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .headline-slide-container .nav-buttons button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .news-trending {
+        padding: 5px;
+        padding-inline: 35px;
+      }
+
+      .news-recent {
+        padding: 5px;
+        padding-inline: 35px;
+      }
+
+      .attacker-profiles {
+        padding: 5px;
+        padding-inline: 35px;
+      }
+
+      .news-card-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .news-card {
+        width: 23%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .news-card img {
+        width: 100%;
+        height: 170px;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      .news-card h4 {
+        text-align: left;
+        width: 100%;
+        height: 30%;
+        padding: 10px;
+        margin-block: 10px;
+      }
+
+      .attacker-card-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .attacker-card {
+        width: 23%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #c6c2c2;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .attacker-card img {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        align-self: center;
+      }
+
+      .attacker-card h4 {
+        text-align: center;
+        width: 100%;
+        margin-block: 10px;
+      }
+
+      .attacker-card .description {
+        text-align: left;
+        width: 85%;
+        margin-block: 10px;
+        margin-inline: 20px;
+      }
+
+      .headline {
+        position: relative;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+      }
+
+      .headline img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .bottom-left {
+        position: absolute;
+        bottom: 25px;
+        left: 16px;
+        color: white;
+        width: 300px;
+        background-color: rgba(125, 125, 125, 0.23);
+        backdrop-filter: blur(10px);
+        text-align: left;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">CyberB<br />News</div>
+      <ul class="navbar-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/trending.html">Trending</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="news-tag">
+      <ul class="tag-container">
+        <li style="background-color: #800404">
+          <a href="/categories.html">Breaches</a>
+        </li>
+        <li style="background-color: #0033a1">
+          <a href="/categories.html">Cyber News</a>
+        </li>
+        <li style="background-color: #9c7800">
+          <a href="/categories.html">Exploits</a>
+        </li>
+        <li style="background-color: #56027d">
+          <a href="/categories.html">Threats</a>
+        </li>
+        <li style="background-color: #004427">
+          <a href="/categories.html">Viruses</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="news-headline">
+      <h1>HEADLINE</h1>
+      <div class="headline" onclick="redirectNews()">
+        <img src="/assets/images/cyber-security-6.png" alt="" />
+        <div class="bottom-left">
+          Chinese Hackers Hijacked NSA-Linked Hacking Tool: Report A Chinese
+          hacker indicted on Tuesday and the PRC-based cybersecurity company he
+          worked for are both...
+        </div>
+      </div>
+    </div>
+
+    <div class="news-trending">
+      <h2>Trending</h2>
+      <hr width="100%" size="2" color="black" noshade />
+      <div class="news-card-container">
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-3.png" alt="" />
+          <h4>
+            Founder of collapsed crypto giant Celsius admits to manipulations
+            and fraud. - 2 hours ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-2.png" alt="" />
+          <h4>
+            Cloudflare: 6.5% of global traffic, 4.3% of emails potentially
+            malicious. - 1 days ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-12.png" alt="" />
+          <h4>
+            Hackers target Ukraine’s defence sector in new campaign. - 23 hours
+            ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-4.png" alt="" />
+          <h4>
+            OpenAI’s new model pursues survival at all costs, tests show - 5
+            Hours ago
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-recent">
+      <h2>Recent</h2>
+      <hr width="100%" size="2" color="black" noshade />
+      <div class="news-card-container">
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-1.png" alt="" />
+          <h4>
+            Bjorka, the Online Hacker Trying To Take Down the Indonesian
+            Government. - 1 Hours ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-3.png" alt="" />
+          <h4>
+            Founder of collapsed crypto giant Celsius admits to manipulations
+            and fraud. - 2 hours ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-5.png" alt="" />
+          <h4>
+            Musk’s X launches new image generator, promptly takes it down. - 5
+            hours ago
+          </h4>
+        </div>
+        <div class="news-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-7.png" alt="" />
+          <h4>
+            Researchers bypass iPhone security controls to access sensitive
+            data. -6 hours ago
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="attacker-profiles">
+      <h2>Attacker Profile</h2>
+      <div class="attacker-card-container">
+        <div class="attacker-card" onclick="redirectAttacker()">
+          <img src="/assets/images/attacker-bjorka-1.png" alt="" />
+          <h4>Bjorka</h4>
+          <div class="description">
+            Bjorka is a pseudonymous hacker known for high-profile data
+            breaches, primarily targeting Indonesian institutions. Their actions
+            have exposed systemic cybersecurity flaws, sparking public debates
+            about data protection and government.
+          </div>
+        </div>
+        <div class="attacker-card" onclick="redirectAttacker()">
+          <img src="/assets/images/attacker-gary-mckinnon-1.png" alt="" />
+          <h4>Gary McKinnon</h4>
+          <div class="description">
+            Gained notoriety for hacking NASA and U.S. military networks,
+            claiming to search for UFO evidence.
+          </div>
+        </div>
+        <div class="attacker-card" onclick="redirectAttacker()">
+          <img src="/assets/images/attacker-albert-gonzalez-1.png" alt="" />
+          <h4>Albert Gonzalez</h4>
+          <div class="description">
+            Mastermind behind the TJX and Heartland Payment Systems data
+            breaches, stealing millions of credit card numbers.
+          </div>
+        </div>
+        <div class="attacker-card" onclick="redirectAttacker()">
+          <img src="/assets/images/attacker-salt-typhoon-1.png" alt="" />
+          <h4>Salt Typhoon</h4>
+          <div class="description">
+            Associated with cyber-espionage campaigns targeting U.S.
+            telecommunications systems, including devices of prominent political
+            figures such as members of the Trump family and aides from the
+            Harris-Biden administration.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright 2024 - 2024 PT. CyberB News Media. All Rights Reserved.
+    </footer>
+
+    <script>
+      const slides = document.querySelectorAll(".headline-slide");
+      let currentSlide = 0;
+
+      const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      };
+
+      const nextSlide = () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      };
+
+      const prevSlide = () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      };
+
+      document.getElementById("nextBtn").addEventListener("click", nextSlide);
+      document.getElementById("prevBtn").addEventListener("click", prevSlide);
+
+      // Auto-slide functionality
+      setInterval(nextSlide, 5000);
+
+      function redirectNews() {
+        window.location.href = "/single.html";
+      }
+
+      function redirectAttacker() {
+        window.location.href = "/attacker-profile.html";
+      }
+
+      function redirectCategories() {
+        window.location.href = "/categories.html";
+      }
+    </script>
+  </body>
+</html>

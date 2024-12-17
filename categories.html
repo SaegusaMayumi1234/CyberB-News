@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberB News</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p,
+      ul,
+      li,
+      a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;
+        background-color: #9a9999;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 35px;
+        padding-top: 15px;
+        align-items: center;
+      }
+
+      .navbar .navbar-logo {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+      }
+
+      .navbar .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar .navbar-links a {
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+
+      .container {
+        margin-top: 20px;
+        padding-inline: 35px;
+      }
+
+      .container h1 {
+        text-align: left;
+      }
+
+      .posts {
+        margin-top: 30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .post-card {
+        display: flex;
+        gap: 30px;
+        cursor: pointer;
+      }
+
+      .post-card img {
+        border-radius: 20px;
+        width: 30%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .post-card-content {
+        width: 65%;
+      }
+
+      .headline {
+        position: relative;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+      }
+
+      .headline img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .bottom-left {
+        position: absolute;
+        bottom: 25px;
+        left: 16px;
+        color: white;
+        width: 300px;
+        background-color: rgba(125, 125, 125, 0.23);
+        backdrop-filter: blur(10px);
+        text-align: left;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-logo">CyberB<br />News</div>
+      <ul class="navbar-links">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/trending.html">Trending</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>Breaches</h1>
+      <div class="headline" onclick="redirectNews()">
+        <img src="/assets/images/cyber-security-10.png" alt="" />
+        <div class="bottom-left">
+          Chinese hacker singlehandedly responsible for exploiting 81,000 Sophos
+          firewalls, DOJ says
+        </div>
+      </div>
+      <hr width="100%" size="2" color="black" noshade />
+      <div class="posts">
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-1.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              Bjorka, the Online Hacker Trying To Take Down the Indonesian
+              Government
+            </h2>
+            <p>
+              The hacker using the Bjorka account is suspected of freely
+              hacking  netizens’ data in a number of applications managed by
+              public  institutions. This indicates the unpreparedness of public
+              institutions  in fulfilling obligations as stipulated in the
+              Personal Data Protection  Law. Over.....
+            </p>
+            <div>1 Hour Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-3.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              Founder of collapsed crypto giant Celsius admits to manipulations
+              and fraud.
+            </h2>
+            <p>
+              According to Inner City Press reports from the court, Mashinsky
+              admitted that he induced investors to sell their bitcoin (BTC) to
+              Celsius by making false statements about its Earn program, which
+              was designed to pay up to 18% interest on their deposits.
+              Moreover, the founder pleaded guilty to manipulating the price of
+              CEL, the native token...
+            </p>
+            <div>2 hours Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-5.png" alt="" />
+          <div class="post-card-content">
+            <h2>Hackers target Ukraine’s defence sector in new campaign</h2>
+            <p>
+              The attackers sent emails mimicking the official messages from a
+              legitimate organization, the Ukrainian League of Industrialists
+              and Entrepreneurs, according to the country’s cyber defence
+              authorities. “The emails advertised a conference held on December
+              5th in Kyiv, aimed at aligning the products of domestic defense
+              industry companies with NATO standards,” the State Service for
+              Special Communications and Information Protection (SSSCIP) said...
+            </p>
+            <div>5 hours Ago</div>
+          </div>
+        </div>
+        <div class="post-card" onclick="redirectNews()">
+          <img src="/assets/images/cyber-security-7.png" alt="" />
+          <div class="post-card-content">
+            <h2>
+              Researchers bypass iPhone security controls to access sensitive
+              data
+            </h2>
+            <p>
+              Researchers demonstrated that it can be exploited to gain
+              malicious access to sensitive information stored on iCloud. The
+              flaw was discovered by 08Tc3wBB and Jamf, a cybersecurity company
+              specializing in securing Apple devices. “Should this TCC bypass
+              vulnerability be successfully exploited on an unpatched device....
+            </p>
+            <div>6 hours Ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright 2024 - 2024 PT. CyberB News Media. All Rights Reserved.
+    </footer>
+
+    <script>
+      function redirectNews() {
+        window.location.href = "/single.html";
+      }
+
+      function redirectAttacker() {
+        window.location.href = "/attacker-profile.html";
+      }
+    </script>
+  </body>
+</html>
